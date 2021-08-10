@@ -5,31 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Keeper</title>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="app.css">
+    <!-- Bulma CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>
 
 <body>
+    <!-- Bulma Section with Responsive Padding -->
     <section class="section">
+        <!-- Container centered Horizontally -->
         <div class="container">
+            <!-- Column Layout -->
             <div class="columns">
+                <!-- Half Column with one-quarter offset i.e. Centered -->
                 <div class="column is-half is-offset-one-quarter">
+                    <!-- Main Container for Card-->
                     <div class="card">
+                        <!-- Responsive Image -->
                         <div class="card-image">
+                            <!-- 2:1 Aspect Ratio -->
                             <figure class="image is-2by1">
                                 <img
                                     src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80">
                             </figure>
                         </div>
+                        <!-- Header with Shadow -->
                         <header class="card-header">
                             <p class="card-header-title">Ping Pong Score Keeper</p>
                         </header>
+                        <!-- Padded Text Content -->
                         <div class="card-content">
                             <div class="content">
+                                <!-- Scoreboard Display -->
                                 <h1 class="title is-1"><span id="p1Score">0</span> to <span id="p2Score">0</span></h1>
                                 <p class="subtitle">Use the buttons below to keep score</p>
 
+                                <!-- Winning Score Select with Label -->
                                 <label for="gamePoint" class="label is-large is-inline">Playing To:</label>
+                                <!-- Rounded Select -->
                                 <div class="select is-rounded">
                                     <select name="" id="gamePoint">
                                         <option value="3">3</option>
@@ -46,11 +60,13 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Horizontal Buttons Bar -->
                         <footer class="card-footer">
                             <button id="p1Button" class="button is-primary card-footer-item is-large">+1 Player
                                 One</button>
                             <button id="p2Button" class="button is-info card-footer-item is-large">+1 Player
                                 Two</button>
+                            <!-- Reset Button -->
                             <button id="reset" class="button is-danger card-footer-item is-large">Reset</button>
                         </footer>
                     </div>
@@ -59,6 +75,7 @@
         </div>
     </section>
 
+    <!-- Custom JS -->
     <script src="app.js"></script>
 </body>
 
