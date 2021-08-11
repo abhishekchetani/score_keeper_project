@@ -43,3 +43,22 @@ p1.button.addEventListener('click', () => {
 p2.button.addEventListener('click', () => {
     updateScores(p2, p1);
 })
+
+winningGamePoint.addEventListener('change', () => {
+    // console.log(winningGamePoint.value);
+    winningScore = parseInt(winningGamePoint.value);
+    resetGame();
+})
+
+resetButton.addEventListener('click', resetGame);
+
+function resetGame() {
+    isGameOver = false;
+
+    for (let p of [p1, p2]) {
+        p.score = 0;
+        p.scoreBoard.textContent = 0;
+        p.scoreBoard.classList.remove('has-text-success', 'has-text-danger');
+        p.button.disabled = false;
+    }
+}
